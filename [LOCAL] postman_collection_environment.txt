@@ -1,0 +1,2 @@
+[{"key":"device_id","value":"device_test"},{"key":"device_password","value":"day_0"},{"key":"device_id2","value":"device_test3"},{"key":"username2","value":"8ee96ee3-3f7b-4cff-b3b0-d90bae24eafe"},{"key":"port","value":"5000”}],
+[{"key":"url","value":"localhost"},{"key":"username","value":"b4ed218e-0ef6-4c0a-b7e3-ac86e6edffb2"},{"key":"password","value":"make_america_great_again"},{"key":"email","value":"samcrane8@gmail.com"}]

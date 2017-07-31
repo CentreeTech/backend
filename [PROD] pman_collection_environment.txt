@@ -1,0 +1,2 @@
+[{"key":"url","value":"http://backend.centree.xyz"},{"key":"username","value":"b4ed218e-0ef6-4c0a-b7e3-ac86e6edffb2"},{"key":"password","value":"make_america_great_again"},{"key":"email","value":"samcrane8@gmail.com"},{"key":"device_id","value":"device_test"},{"key":"device_password","value":"day_0”}],
+[{"key":"port","value":"5000"}]

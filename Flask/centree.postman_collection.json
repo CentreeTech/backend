@@ -1,0 +1,1603 @@
+{
+	"variables": [],
+	"info": {
+		"name": "centree",
+		"_postman_id": "c2b39e23-dba2-9c6a-7283-bd1318ad2d10",
+		"description": "http apis of centree",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Classification",
+			"description": "For classifications done by ClassUI.",
+			"item": [
+				{
+					"name": "Add Classifications",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": {
+								"username": "{{username}}",
+								"password": "{{password}}",
+								"saveHelperData": true,
+								"showPassword": false
+							}
+						},
+						"url": "{{url}}:{{port}}/add_classifications",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							},
+							{
+								"key": "Authorization",
+								"value": "Basic YjRlZDIxOGUtMGVmNi00YzBhLWI3ZTMtYWM4NmU2ZWRmZmIyOm1ha2VfYW1lcmljYV9ncmVhdF9hZ2Fpbg==",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "[\n\t{\n\t\t\"start_time\" : 0.2,\n\t\t\"end_time\" : 0.5,\n\t\t\"service\" : \"siren\",\n\t\t\"attributes\" : {\n\t\t\t\"in-car\" : \"yes\"\n\t\t},\n\t\t\"media\" : \"crash.mp4\"\n\t},\n\t{\n\t\t\"start_time\" : 0.2,\n\t\t\"end_time\" : 0.5,\n\t\t\"service\" : \"crash\",\n\t\t\"attributes\" : {\n\t\t\t\"type\" : \"fenderbender\",\n\t\t\t\"hospitalized\" : \"no\"\n\t\t},\n\t\t\"media\" : \"crash.mp4\"\n\t}\n]"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Get Classifications",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": {
+								"username": "{{username}}",
+								"password": "{{password}}",
+								"saveHelperData": true,
+								"showPassword": false
+							}
+						},
+						"url": "{{url}}:{{port}}/get_classifications",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							},
+							{
+								"key": "Authorization",
+								"value": "Basic YjRlZDIxOGUtMGVmNi00YzBhLWI3ZTMtYWM4NmU2ZWRmZmIyOm1ha2VfYW1lcmljYV9ncmVhdF9hZ2Fpbg==",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "[\n\t\"de368efb-b135-4b97-b002-47d1c5e3882b\"\n]"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Get Relevant Classifications",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": {
+								"username": "{{username}}",
+								"password": "{{password}}",
+								"saveHelperData": true,
+								"showPassword": false
+							}
+						},
+						"url": "{{url}}:{{port}}/get_relevant_classifications",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							},
+							{
+								"key": "Authorization",
+								"value": "Basic YjRlZDIxOGUtMGVmNi00YzBhLWI3ZTMtYWM4NmU2ZWRmZmIyOm1ha2VfYW1lcmljYV9ncmVhdF9hZ2Fpbg==",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"service_names\": [\"Crash\"]\n}"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Get Unclassified Events",
+					"request": {
+						"url": "{{url}}:{{port}}/get_unclassified_events",
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"number_of_events_requested\" : 4\n}"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Get All Classifications",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": {
+								"username": "{{username}}",
+								"password": "{{password}}",
+								"saveHelperData": true,
+								"showPassword": false
+							}
+						},
+						"url": "{{url}}:{{port}}/get_all_classifications",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							},
+							{
+								"key": "Authorization",
+								"value": "Basic YjRlZDIxOGUtMGVmNi00YzBhLWI3ZTMtYWM4NmU2ZWRmZmIyOm1ha2VfYW1lcmljYV9ncmVhdF9hZ2Fpbg==",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"service_name\" : \"crash\"\n}"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Get Relevant Classifications",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": {
+								"username": "{{username}}",
+								"password": "{{password}}",
+								"saveHelperData": true,
+								"showPassword": false
+							}
+						},
+						"url": "{{url}}:{{port}}/get_relevant_classifications",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							},
+							{
+								"key": "Authorization",
+								"value": "Basic YjRlZDIxOGUtMGVmNi00YzBhLWI3ZTMtYWM4NmU2ZWRmZmIyOm1ha2VfYW1lcmljYV9ncmVhdF9hZ2Fpbg==",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"service_names\" : [\"crash\", \"Not Hotdog\"]\n}"
+						},
+						"description": ""
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Cloud Storage",
+			"description": "",
+			"item": [
+				{
+					"name": "get_data_storage_credentials",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									"",
+									"",
+									"tests[\"Body matches string\"] = responseBody.has(\"200\");",
+									"",
+									"tests[\"Response time is less than 500ms\"] = responseTime < 500;"
+								]
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": {
+								"username": "{{username}}",
+								"password": "{{password}}",
+								"saveHelperData": true,
+								"showPassword": false
+							}
+						},
+						"url": "{{url}}:{{port}}/get_data_storage_credentials",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							},
+							{
+								"key": "Authorization",
+								"value": "Basic YjRlZDIxOGUtMGVmNi00YzBhLWI3ZTMtYWM4NmU2ZWRmZmIyOm1ha2VfYW1lcmljYV9ncmVhdF9hZ2Fpbg==",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"description": "this call requires user authentication with username and password,"
+					},
+					"response": []
+				},
+				{
+					"name": "Get New Filename",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": {
+								"username": "{{username}}",
+								"password": "{{password}}",
+								"saveHelperData": true,
+								"showPassword": false
+							}
+						},
+						"url": "{{url}}:{{port}}/get_new_filename",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Basic YjRlZDIxOGUtMGVmNi00YzBhLWI3ZTMtYWM4NmU2ZWRmZmIyOm1ha2VfYW1lcmljYV9ncmVhdF9hZ2Fpbg==",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"service_name\" : \"crash\"\n}"
+						},
+						"description": ""
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Device",
+			"description": "These are the API calls that are useful for the boxes themselves to call.",
+			"item": [
+				{
+					"name": "register_device",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									"",
+									"",
+									"tests[\"Body matches string\"] = responseBody.has(\"200\");",
+									"",
+									"tests[\"Response time is less than 500ms\"] = responseTime < 500;"
+								]
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": {
+								"username": "{{username}}",
+								"password": "{{password}}",
+								"saveHelperData": true,
+								"showPassword": false
+							}
+						},
+						"url": "{{url}}:5000/register_device",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							},
+							{
+								"key": "Authorization",
+								"value": "Basic YjRlZDIxOGUtMGVmNi00YzBhLWI3ZTMtYWM4NmU2ZWRmZmIyOm1ha2VfYW1lcmljYV9ncmVhdF9hZ2Fpbg==",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"id\": \"{{device_id}}\",\n\t\"password\" : \"{{device_password}}\",\n\t\"software_version\" : \"1.0\",\n\t\"location\" : \"20, -69\",\n\t\"name\" : \"Peachtree and Peachtree\"\n}"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "list_all_devices",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									"",
+									"",
+									"tests[\"Body matches string\"] = responseBody.has(\"200\");",
+									"",
+									"tests[\"Response time is less than 500ms\"] = responseTime < 500;"
+								]
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": {
+								"username": "{{username}}",
+								"password": "{{password}}",
+								"saveHelperData": true,
+								"showPassword": false
+							}
+						},
+						"url": "{{url}}:5000/list_all_devices",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							},
+							{
+								"key": "Authorization",
+								"value": "Basic YjRlZDIxOGUtMGVmNi00YzBhLWI3ZTMtYWM4NmU2ZWRmZmIyOm1ha2VfYW1lcmljYV9ncmVhdF9hZ2Fpbg==",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"description": "this call requires user authentication with username and password,"
+					},
+					"response": []
+				},
+				{
+					"name": "list_user_devices",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									"",
+									"",
+									"tests[\"Body matches string\"] = responseBody.has(\"200\");",
+									"",
+									"tests[\"Response time is less than 500ms\"] = responseTime < 500;"
+								]
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": {
+								"username": "{{username}}",
+								"password": "{{password}}",
+								"saveHelperData": true,
+								"showPassword": false
+							}
+						},
+						"url": "{{url}}:{{port}}/list_user_devices",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							},
+							{
+								"key": "Authorization",
+								"value": "Basic YjRlZDIxOGUtMGVmNi00YzBhLWI3ZTMtYWM4NmU2ZWRmZmIyOm1ha2VfYW1lcmljYV9ncmVhdF9hZ2Fpbg==",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"description": "this call requires user authentication with username and password,"
+					},
+					"response": []
+				},
+				{
+					"name": "add_user_device",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": {
+								"username": "{{username}}",
+								"password": "{{password}}",
+								"saveHelperData": true,
+								"showPassword": false
+							}
+						},
+						"url": "{{url}}:{{port}}/add_user_device",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							},
+							{
+								"key": "Authorization",
+								"value": "Basic YjRlZDIxOGUtMGVmNi00YzBhLWI3ZTMtYWM4NmU2ZWRmZmIyOm1ha2VfYW1lcmljYV9ncmVhdF9hZ2Fpbg==",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"device_id\" : \"{{device_id}}\"\n}"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "remove_user_device",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": {
+								"username": "{{username}}",
+								"password": "{{password}}",
+								"saveHelperData": true,
+								"showPassword": false
+							}
+						},
+						"url": "{{url}}:{{port}}/remove_user_device",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							},
+							{
+								"key": "Authorization",
+								"value": "Basic YjRlZDIxOGUtMGVmNi00YzBhLWI3ZTMtYWM4NmU2ZWRmZmIyOm1ha2VfYW1lcmljYV9ncmVhdF9hZ2Fpbg==",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"device_id\" : \"device_test1\"\n}"
+						},
+						"description": ""
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Event",
+			"description": "These calls pertain to anything regarding an \"event\". Most of these folders are focused on a particular table in the database or our means of holding static information (S3), but in this case it's actually many tables: we add and drop services, and those services are each held in their own table.",
+			"item": [
+				{
+					"name": "List New Events",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									"",
+									"",
+									"tests[\"Body matches string\"] = responseBody.has(\"200\");",
+									"",
+									"tests[\"Response time is less than 500ms\"] = responseTime < 500;"
+								]
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": {
+								"username": "{{username}}",
+								"password": "{{password}}",
+								"saveHelperData": true,
+								"showPassword": false
+							}
+						},
+						"url": "{{url}}:{{port}}/list_new_events",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							},
+							{
+								"key": "Authorization",
+								"value": "Basic YjRlZDIxOGUtMGVmNi00YzBhLWI3ZTMtYWM4NmU2ZWRmZmIyOm1ha2VfYW1lcmljYV9ncmVhdF9hZ2Fpbg==",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"timestamp\" : \"2017-07-17 20:29:19.777940\"\n}"
+						},
+						"description": "this call requires user authentication with username and password,"
+					},
+					"response": []
+				},
+				{
+					"name": "List Device Events",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									"",
+									"",
+									"tests[\"Body matches string\"] = responseBody.has(\"200\");",
+									"",
+									"tests[\"Response time is less than 500ms\"] = responseTime < 500;"
+								]
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": {
+								"username": "{{username}}",
+								"password": "{{password}}",
+								"saveHelperData": true,
+								"showPassword": false
+							}
+						},
+						"url": "{{url}}:5000/list_device_events",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							},
+							{
+								"key": "Authorization",
+								"value": "Basic YjRlZDIxOGUtMGVmNi00YzBhLWI3ZTMtYWM4NmU2ZWRmZmIyOm1ha2VfYW1lcmljYV9ncmVhdF9hZ2Fpbg==",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"device_id\": \"{{device_id}}\"\n}"
+						},
+						"description": "this call requires user authentication with username and password,"
+					},
+					"response": []
+				},
+				{
+					"name": "Add Device Event",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									"",
+									"",
+									"tests[\"Body matches string\"] = responseBody.has(\"200\");",
+									"",
+									"tests[\"Response time is less than 500ms\"] = responseTime < 500;"
+								]
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": {
+								"username": "{{device_id}}",
+								"password": "{{device_password}}",
+								"saveHelperData": true,
+								"showPassword": false
+							}
+						},
+						"url": "{{url}}:5000/add_device_event",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							},
+							{
+								"key": "Authorization",
+								"value": "Basic ZGV2aWNlX3Rlc3Q6ZGF5XzA=",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"service_name\": \"crash\"\n}"
+						},
+						"description": "This call requires device authentication with username and password of the device, not the user."
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Generate",
+			"description": "",
+			"item": [
+				{
+					"name": "Add New Model",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": {
+								"username": "{{username}}",
+								"password": "{{password}}",
+								"saveHelperData": true,
+								"showPassword": false
+							}
+						},
+						"url": "{{url}}:{{port}}/add_new_model",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							},
+							{
+								"key": "Authorization",
+								"value": "Basic YjRlZDIxOGUtMGVmNi00YzBhLWI3ZTMtYWM4NmU2ZWRmZmIyOm1ha2VfYW1lcmljYV9ncmVhdF9hZ2Fpbg==",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"positive_cases\" : [\"Crash\", \"Blarg\"],\n\t\"negative_cases\" : [],\n\t\"algorithm_name\" : \"cnn_neural_net_v1_0\"\n}"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Add New Algorithm",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": {
+								"username": "{{username}}",
+								"password": "{{password}}",
+								"saveHelperData": true,
+								"showPassword": false
+							}
+						},
+						"url": "{{url}}:{{port}}/add_new_algorithm",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							},
+							{
+								"key": "Authorization",
+								"value": "Basic YjRlZDIxOGUtMGVmNi00YzBhLWI3ZTMtYWM4NmU2ZWRmZmIyOm1ha2VfYW1lcmljYV9ncmVhdF9hZ2Fpbg==",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"algorithm_name\" : \"cnn_neural_net_v1_0\",\n\t\"description\" : \"This is our first cnn model.\"\n}"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "List All Algorithms",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": {
+								"username": "{{username}}",
+								"password": "{{password}}",
+								"saveHelperData": true,
+								"showPassword": false
+							}
+						},
+						"url": "{{url}}:{{port}}/list_all_algorithms",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							},
+							{
+								"key": "Authorization",
+								"value": "Basic YjRlZDIxOGUtMGVmNi00YzBhLWI3ZTMtYWM4NmU2ZWRmZmIyOm1ha2VfYW1lcmljYV9ncmVhdF9hZ2Fpbg==",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"algorithm_name\" : \"cnn_neural_net_v1_0\",\n\t\"description\" : \"This is our first cnn model.\"\n}"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "List All Models",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": {
+								"username": "{{username}}",
+								"password": "{{password}}",
+								"saveHelperData": true,
+								"showPassword": false
+							}
+						},
+						"url": "{{url}}:{{port}}/list_all_models",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							},
+							{
+								"key": "Authorization",
+								"value": "Basic YjRlZDIxOGUtMGVmNi00YzBhLWI3ZTMtYWM4NmU2ZWRmZmIyOm1ha2VfYW1lcmljYV9ncmVhdF9hZ2Fpbg==",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"algorithm_name\" : \"cnn_neural_net_v1_0\",\n\t\"description\" : \"This is our first cnn model.\"\n}"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Get Model To Update",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": {
+								"username": "{{username}}",
+								"password": "{{password}}",
+								"saveHelperData": true,
+								"showPassword": false
+							}
+						},
+						"url": "{{url}}:{{port}}/get_model_to_update",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							},
+							{
+								"key": "Authorization",
+								"value": "Basic YjRlZDIxOGUtMGVmNi00YzBhLWI3ZTMtYWM4NmU2ZWRmZmIyOm1ha2VfYW1lcmljYV9ncmVhdF9hZ2Fpbg==",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"algorithm_name\" : \"cnn_neural_net_v1_0\",\n\t\"description\" : \"This is our first cnn model.\"\n}"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Remove Algorithm",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": {
+								"username": "{{username}}",
+								"password": "{{password}}",
+								"saveHelperData": true,
+								"showPassword": false
+							}
+						},
+						"url": "{{url}}:{{port}}/remove_algorithm",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							},
+							{
+								"key": "Authorization",
+								"value": "Basic YjRlZDIxOGUtMGVmNi00YzBhLWI3ZTMtYWM4NmU2ZWRmZmIyOm1ha2VfYW1lcmljYV9ncmVhdF9hZ2Fpbg==",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"algorithm_name\" : \"cnn_neural_net_v1_0\"\n}"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Model Exists",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": {
+								"username": "{{username}}",
+								"password": "{{password}}",
+								"saveHelperData": true,
+								"showPassword": false
+							}
+						},
+						"url": "{{url}}:{{port}}/model_exists",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							},
+							{
+								"key": "Authorization",
+								"value": "Basic YjRlZDIxOGUtMGVmNi00YzBhLWI3ZTMtYWM4NmU2ZWRmZmIyOm1ha2VfYW1lcmljYV9ncmVhdF9hZ2Fpbg==",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"positive_cases\" : [\"crash\"],\n\t\"negative_cases\" : [\"Not Hotdog\"],\n\t\"algorithm_name\" : \"cnn_neural_net_v1_0\"\n}"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Get Models Under Constraints",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": {
+								"username": "{{username}}",
+								"password": "{{password}}",
+								"saveHelperData": true,
+								"showPassword": false
+							}
+						},
+						"url": "{{url}}:{{port}}/get_models_under_constraint",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							},
+							{
+								"key": "Authorization",
+								"value": "Basic YjRlZDIxOGUtMGVmNi00YzBhLWI3ZTMtYWM4NmU2ZWRmZmIyOm1ha2VfYW1lcmljYV9ncmVhdF9hZ2Fpbg==",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"positive_cases\" : [\"Crash\"],\n\t\"negative_cases\" : [],\n\t\"algorithm_name\" : \"cnn_neural_net_v1_0\"\n}"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Model",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": {
+								"username": "{{username}}",
+								"password": "{{password}}",
+								"saveHelperData": true,
+								"showPassword": false
+							}
+						},
+						"url": "{{url}}:{{port}}/delete_model",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							},
+							{
+								"key": "Authorization",
+								"value": "Basic YjRlZDIxOGUtMGVmNi00YzBhLWI3ZTMtYWM4NmU2ZWRmZmIyOm1ha2VfYW1lcmljYV9ncmVhdF9hZ2Fpbg==",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"model_id\" : \"d966b494-577d-4113-8cc1-e751537af3fc\"\n}"
+						},
+						"description": ""
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Service",
+			"description": "",
+			"item": [
+				{
+					"name": "list_all_services",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": {
+								"username": "{{username}}",
+								"password": "{{password}}",
+								"saveHelperData": true,
+								"showPassword": false
+							}
+						},
+						"url": "{{url}}:{{port}}/list_all_services",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Basic YjRlZDIxOGUtMGVmNi00YzBhLWI3ZTMtYWM4NmU2ZWRmZmIyOm1ha2VfYW1lcmljYV9ncmVhdF9hZ2Fpbg==",
+								"description": ""
+							}
+						],
+						"body": {},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "add_service",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": {
+								"username": "{{username}}",
+								"password": "{{password}}",
+								"saveHelperData": true,
+								"showPassword": false
+							}
+						},
+						"url": "{{url}}:{{port}}/add_service",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							},
+							{
+								"key": "Authorization",
+								"value": "Basic YjRlZDIxOGUtMGVmNi00YzBhLWI3ZTMtYWM4NmU2ZWRmZmIyOm1ha2VfYW1lcmljYV9ncmVhdF9hZ2Fpbg==",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"service_name\": \"Crash\",\n\t\"attributes\" : {\n\t\t\"in-car\" : [\"yes\", \"no\"]\n\t}\n}"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "remove_service",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": {
+								"username": "{{username}}",
+								"password": "{{password}}",
+								"saveHelperData": true,
+								"showPassword": false
+							}
+						},
+						"url": "{{url}}:{{port}}/remove_service",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							},
+							{
+								"key": "Authorization",
+								"value": "Basic YjRlZDIxOGUtMGVmNi00YzBhLWI3ZTMtYWM4NmU2ZWRmZmIyOm1ha2VfYW1lcmljYV9ncmVhdF9hZ2Fpbg==",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"name\" : \"crash\"\n}"
+						},
+						"description": "Removes a service."
+					},
+					"response": []
+				},
+				{
+					"name": "get_user_services",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": {
+								"username": "{{username}}",
+								"password": "{{password}}",
+								"saveHelperData": true,
+								"showPassword": false
+							}
+						},
+						"url": "{{url}}:{{port}}/get_user_services",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Basic YjRlZDIxOGUtMGVmNi00YzBhLWI3ZTMtYWM4NmU2ZWRmZmIyOm1ha2VfYW1lcmljYV9ncmVhdF9hZ2Fpbg==",
+								"description": ""
+							}
+						],
+						"body": {},
+						"description": "Returns a list of all the different services available."
+					},
+					"response": []
+				},
+				{
+					"name": "add_user_service",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": {
+								"username": "{{username}}",
+								"password": "{{password}}",
+								"saveHelperData": true,
+								"showPassword": false
+							}
+						},
+						"url": "{{url}}:{{port}}/add_user_service",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							},
+							{
+								"key": "Authorization",
+								"value": "Basic YjRlZDIxOGUtMGVmNi00YzBhLWI3ZTMtYWM4NmU2ZWRmZmIyOm1ha2VfYW1lcmljYV9ncmVhdF9hZ2Fpbg==",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"name\" : \"crash\"\n}"
+						},
+						"description": "Returns a list of all the different services available."
+					},
+					"response": []
+				},
+				{
+					"name": "remove_user_service",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": {
+								"username": "{{username}}",
+								"password": "{{password}}",
+								"saveHelperData": true,
+								"showPassword": false
+							}
+						},
+						"url": "{{url}}:{{port}}/remove_user_service",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							},
+							{
+								"key": "Authorization",
+								"value": "Basic YjRlZDIxOGUtMGVmNi00YzBhLWI3ZTMtYWM4NmU2ZWRmZmIyOm1ha2VfYW1lcmljYV9ncmVhdF9hZ2Fpbg==",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"name\" : \"crash\"\n}"
+						},
+						"description": "Returns a list of all the different services available."
+					},
+					"response": []
+				},
+				{
+					"name": "get_device_services",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": {
+								"username": "{{username}}",
+								"password": "{{password}}",
+								"saveHelperData": true,
+								"showPassword": false
+							}
+						},
+						"url": "{{url}}:{{port}}/get_device_services",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							},
+							{
+								"key": "Authorization",
+								"value": "Basic YjRlZDIxOGUtMGVmNi00YzBhLWI3ZTMtYWM4NmU2ZWRmZmIyOm1ha2VfYW1lcmljYV9ncmVhdF9hZ2Fpbg==",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"device_id\" : \"device_test1\"\n}"
+						},
+						"description": "Returns a list of all the different services available."
+					},
+					"response": []
+				},
+				{
+					"name": "add_device_service",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": {
+								"username": "{{username}}",
+								"password": "{{password}}",
+								"saveHelperData": true,
+								"showPassword": false
+							}
+						},
+						"url": "{{url}}:{{port}}/add_device_service",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							},
+							{
+								"key": "Authorization",
+								"value": "Basic YjRlZDIxOGUtMGVmNi00YzBhLWI3ZTMtYWM4NmU2ZWRmZmIyOm1ha2VfYW1lcmljYV9ncmVhdF9hZ2Fpbg==",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"device_id\" : \"{{device_id}}\",\n  \"service_name\" : \"crash\"\n}"
+						},
+						"description": "Returns a list of all the different services available."
+					},
+					"response": []
+				},
+				{
+					"name": "remove_device_service",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": {
+								"username": "{{username}}",
+								"password": "{{password}}",
+								"saveHelperData": true,
+								"showPassword": false
+							}
+						},
+						"url": "{{url}}:{{port}}/remove_device_service",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							},
+							{
+								"key": "Authorization",
+								"value": "Basic YjRlZDIxOGUtMGVmNi00YzBhLWI3ZTMtYWM4NmU2ZWRmZmIyOm1ha2VfYW1lcmljYV9ncmVhdF9hZ2Fpbg==",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"device_id\" : \"device_test1\",\n  \"service_name\" : \"crash\"\n}"
+						},
+						"description": "Returns a list of all the different services available."
+					},
+					"response": []
+				},
+				{
+					"name": "add service attributes",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": {
+								"username": "{{username}}",
+								"password": "{{password}}",
+								"saveHelperData": true,
+								"showPassword": false
+							}
+						},
+						"url": "{{url}}:{{port}}/add_service_attributes",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							},
+							{
+								"key": "Authorization",
+								"value": "Basic YjRlZDIxOGUtMGVmNi00YzBhLWI3ZTMtYWM4NmU2ZWRmZmIyOm1ha2VfYW1lcmljYV9ncmVhdF9hZ2Fpbg==",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"service_name\" : \"crash\",\n\t\"attributes\" : {\n\t\t\"type\" : [\"fenderbender\", \"t-bone\", \"head-on\"]\n\t}\n}"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "get services attributes",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": {
+								"username": "{{username}}",
+								"password": "{{password}}",
+								"saveHelperData": true,
+								"showPassword": false
+							}
+						},
+						"url": "{{url}}:{{port}}/get_services_attributes",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							},
+							{
+								"key": "Authorization",
+								"value": "Basic YjRlZDIxOGUtMGVmNi00YzBhLWI3ZTMtYWM4NmU2ZWRmZmIyOm1ha2VfYW1lcmljYV9ncmVhdF9hZ2Fpbg==",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"service_names\" : [\"crash\", \"siren\", \"Not Hotdog\"]\n}"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "remove service attributes",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": {
+								"username": "{{username}}",
+								"password": "{{password}}",
+								"saveHelperData": true,
+								"showPassword": false
+							}
+						},
+						"url": "{{url}}:{{port}}/remove_service_attributes",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							},
+							{
+								"key": "Authorization",
+								"value": "Basic YjRlZDIxOGUtMGVmNi00YzBhLWI3ZTMtYWM4NmU2ZWRmZmIyOm1ha2VfYW1lcmljYV9ncmVhdF9hZ2Fpbg==",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"service_name\" : \"crash\",\n\t\"attributes\": [\"stuff\"]\n}"
+						},
+						"description": ""
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Subscription",
+			"description": "",
+			"item": [
+				{
+					"name": "http://backend.centree.xyz:5000/get_user_subscriptions",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": {
+								"username": "{{username}}",
+								"password": "make_america_great_again",
+								"saveHelperData": true,
+								"showPassword": false
+							}
+						},
+						"url": "{{url}}:5000/get_user_subscriptions",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Basic YjRlZDIxOGUtMGVmNi00YzBhLWI3ZTMtYWM4NmU2ZWRmZmIyOm1ha2VfYW1lcmljYV9ncmVhdF9hZ2Fpbg==",
+								"description": ""
+							}
+						],
+						"body": {},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "http://backend.centree.xyz:5000/add_user_subscription",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": {
+								"username": "{{username}}",
+								"password": "{{password}}",
+								"saveHelperData": true,
+								"showPassword": false
+							}
+						},
+						"url": "{{url}}:5000/add_user_subscription",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							},
+							{
+								"key": "Authorization",
+								"value": "Basic YjRlZDIxOGUtMGVmNi00YzBhLWI3ZTMtYWM4NmU2ZWRmZmIyOm1ha2VfYW1lcmljYV9ncmVhdF9hZ2Fpbg==",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"service\" : \"crash\"\n}"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "http://backend.centree.xyz:5000/remove_user_subscription",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": {
+								"username": "{{username}}",
+								"password": "{{password}}",
+								"saveHelperData": true,
+								"showPassword": false
+							}
+						},
+						"url": "{{url}}:5000/remove_user_subscription",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							},
+							{
+								"key": "Authorization",
+								"value": "Basic YjRlZDIxOGUtMGVmNi00YzBhLWI3ZTMtYWM4NmU2ZWRmZmIyOm1ha2VfYW1lcmljYV9ncmVhdF9hZ2Fpbg==",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"service\" : \"crash\"\n}"
+						},
+						"description": ""
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "User",
+			"description": "",
+			"item": [
+				{
+					"name": "Register Account User",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									"",
+									"",
+									"tests[\"Body matches string\"] = responseBody.has(\"200\");",
+									"",
+									"tests[\"Response time is less than 500ms\"] = responseTime < 500;"
+								]
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": {
+								"username": "{{username}}",
+								"password": "{{password}}",
+								"saveHelperData": true,
+								"showPassword": false
+							}
+						},
+						"url": "{{url}}:5000/register_account_user",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							},
+							{
+								"key": "Authorization",
+								"value": "Basic YjRlZDIxOGUtMGVmNi00YzBhLWI3ZTMtYWM4NmU2ZWRmZmIyOm1ha2VfYW1lcmljYV9ncmVhdF9hZ2Fpbg==",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"email\": \"scrane31@gatech.edu\",\n\t\"password\" : \"{{password}}\"\n}"
+						},
+						"description": "this call registers a new user! "
+					},
+					"response": []
+				},
+				{
+					"name": "List All Users",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									"",
+									"",
+									"tests[\"Body matches string\"] = responseBody.has(\"200\");",
+									"",
+									"tests[\"Response time is less than 500ms\"] = responseTime < 500;"
+								]
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": {
+								"username": "{{username}}",
+								"password": "{{password}}",
+								"saveHelperData": true,
+								"showPassword": false
+							}
+						},
+						"url": "{{url}}:{{port}}/list_all_users",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Basic YjRlZDIxOGUtMGVmNi00YzBhLWI3ZTMtYWM4NmU2ZWRmZmIyOm1ha2VfYW1lcmljYV9ncmVhdF9hZ2Fpbg==",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"description": "this call requires user authentication with username and password,"
+					},
+					"response": []
+				},
+				{
+					"name": "Login",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									"",
+									"",
+									"tests[\"Body matches string\"] = responseBody.has(\"200\");",
+									"",
+									"tests[\"Response time is less than 500ms\"] = responseTime < 500;"
+								]
+							}
+						}
+					],
+					"request": {
+						"url": "{{url}}:{{port}}/login",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"email\": \"{{email}}\",\n\t\"password\" : \"{{password}}\"\n}"
+						},
+						"description": "when login request is sent, the server replies back with the username of the user. the username should be used to authenticate any other request that needs authentication"
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

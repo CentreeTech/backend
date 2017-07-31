@@ -1,0 +1,375 @@
+{
+	"variables": [],
+	"info": {
+		"name": "centree",
+		"_postman_id": "2a35870c-7dd3-3a3c-81d8-c01f24a7330e",
+		"description": "http apis of centree",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "http://backend.centree.xyz:5000/add_device_event",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"",
+							"",
+							"tests[\"Body matches string\"] = responseBody.has(\"200\");",
+							"",
+							"tests[\"Response time is less than 500ms\"] = responseTime < 500;"
+						]
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": {
+						"username": "device_0",
+						"password": "day_0",
+						"saveHelperData": true,
+						"showPassword": false
+					}
+				},
+				"url": "http://backend.centree.xyz:5000/add_device_event",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Basic ZGV2aWNlXzA6ZGF5XzA=",
+						"description": ""
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"event\": \"bloody_car_crash\"\n}"
+				},
+				"description": "This call requires device authentication with username and password of the device, not the user."
+			},
+			"response": []
+		},
+		{
+			"name": "http://backend.centree.xyz:5000/list_device_events",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"",
+							"",
+							"tests[\"Body matches string\"] = responseBody.has(\"200\");",
+							"",
+							"tests[\"Response time is less than 500ms\"] = responseTime < 500;"
+						]
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": {
+						"username": "957b2a42-5914-4d6b-a672-ab47226afc9c",
+						"password": "make_america_great_again",
+						"saveHelperData": true,
+						"showPassword": false
+					}
+				},
+				"url": "http://backend.centree.xyz:5000/list_device_events",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Basic OTU3YjJhNDItNTkxNC00ZDZiLWE2NzItYWI0NzIyNmFmYzljOm1ha2VfYW1lcmljYV9ncmVhdF9hZ2Fpbg==",
+						"description": ""
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"device_id\": \"device_0\"\n}"
+				},
+				"description": "this call requires user authentication with username and password,"
+			},
+			"response": []
+		},
+		{
+			"name": "http://backend.centree.xyz:5000/login",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"",
+							"",
+							"tests[\"Body matches string\"] = responseBody.has(\"200\");",
+							"",
+							"tests[\"Response time is less than 500ms\"] = responseTime < 500;"
+						]
+					}
+				}
+			],
+			"request": {
+				"url": "http://backend.centree.xyz:5000/login",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"email\": \"scrane@centree.xyz\",\n\t\"password\" : \"make_america_great_again\"\n}"
+				},
+				"description": "when login request is sent, the server replies back with the username of the user. the username should be used to authenticate any other request that needs authentication"
+			},
+			"response": []
+		},
+		{
+			"name": "http://backend.centree.xyz:5000/register_account_user",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"",
+							"",
+							"tests[\"Body matches string\"] = responseBody.has(\"200\");",
+							"",
+							"tests[\"Response time is less than 500ms\"] = responseTime < 500;"
+						]
+					}
+				}
+			],
+			"request": {
+				"url": "http://backend.centree.xyz:5000/register_account_user",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"email\": \"scrane@centree.xyz\",\n\t\"password\" : \"make_america_great_again\"\n}"
+				},
+				"description": "this call registers a new user! "
+			},
+			"response": []
+		},
+		{
+			"name": "http://backend.centree.xyz:5000/register_device",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"",
+							"",
+							"tests[\"Body matches string\"] = responseBody.has(\"200\");",
+							"",
+							"tests[\"Response time is less than 500ms\"] = responseTime < 500;"
+						]
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": {
+						"username": "957b2a42-5914-4d6b-a672-ab47226afc9c",
+						"password": "make_america_great_again",
+						"saveHelperData": true,
+						"showPassword": false
+					}
+				},
+				"url": "http://backend.centree.xyz:5000/register_device",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					},
+					{
+						"key": "Authorization",
+						"value": "Basic OTU3YjJhNDItNTkxNC00ZDZiLWE2NzItYWI0NzIyNmFmYzljOm1ha2VfYW1lcmljYV9ncmVhdF9hZ2Fpbg==",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"device_id\": \"device_0\",\n\t\"password\" : \"day_0\",\n\t\"software_version\" : \"1.0\",\n\t\"location\" : \"Atlanta\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "http://backend.centree.xyz:5000/list_all_users",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"",
+							"",
+							"tests[\"Body matches string\"] = responseBody.has(\"200\");",
+							"",
+							"tests[\"Response time is less than 500ms\"] = responseTime < 500;"
+						]
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": {
+						"username": "6c28cd89-6acb-46a7-ab01-c17b712c635e",
+						"password": "cyka_blyat",
+						"saveHelperData": true,
+						"showPassword": false
+					}
+				},
+				"url": "http://backend.centree.xyz:5000/list_all_users",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Basic NmMyOGNkODktNmFjYi00NmE3LWFiMDEtYzE3YjcxMmM2MzVlOmN5a2FfYmx5YXQ=",
+						"description": ""
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"description": "this call requires user authentication with username and password,"
+			},
+			"response": []
+		},
+		{
+			"name": "http://backend.centree.xyz:5000/list_all_devices",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"",
+							"",
+							"tests[\"Body matches string\"] = responseBody.has(\"200\");",
+							"",
+							"tests[\"Response time is less than 500ms\"] = responseTime < 500;"
+						]
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": {
+						"username": "6c28cd89-6acb-46a7-ab01-c17b712c635e",
+						"password": "cyka_blyat",
+						"saveHelperData": true,
+						"showPassword": false
+					}
+				},
+				"url": "http://backend.centree.xyz:5000/list_all_devices",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Basic NmMyOGNkODktNmFjYi00NmE3LWFiMDEtYzE3YjcxMmM2MzVlOmN5a2FfYmx5YXQ=",
+						"description": ""
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"description": "this call requires user authentication with username and password,"
+			},
+			"response": []
+		},
+		{
+			"name": "http://backend.centree.xyz:5000/list_user_devices",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"",
+							"",
+							"tests[\"Body matches string\"] = responseBody.has(\"200\");",
+							"",
+							"tests[\"Response time is less than 500ms\"] = responseTime < 500;"
+						]
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": {
+						"username": "957b2a42-5914-4d6b-a672-ab47226afc9c",
+						"password": "make_america_great_again",
+						"saveHelperData": true,
+						"showPassword": false
+					}
+				},
+				"url": "http://backend.centree.xyz:5000/list_user_devices",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Basic OTU3YjJhNDItNTkxNC00ZDZiLWE2NzItYWI0NzIyNmFmYzljOm1ha2VfYW1lcmljYV9ncmVhdF9hZ2Fpbg==",
+						"description": ""
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"description": "this call requires user authentication with username and password,"
+			},
+			"response": []
+		}
+	]
+}
