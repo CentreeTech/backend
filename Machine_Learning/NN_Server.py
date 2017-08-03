@@ -12,8 +12,8 @@ import NN_Models.BaseModel
 #if None then no models needed updating.
 
 
-user_name = "b4ed218e-0ef6-4c0a-b7e3-ac86e6edffb2"
-password = "make_america_great_again"
+user_name = "USERNAME"
+password = "PASSWORD"
 
 production = False
 
